@@ -35,6 +35,12 @@ int	main(int argc, char **argv)
 		std::cerr << "The file does not exist" << std::endl;
 		return (1);
 	}
+	oldFile.peek();
+	if (oldFile.bad())
+	{
+		std::cerr << "Cannot read he file" << std::endl;
+		return (1);
+	}
 
 	std::ofstream	newFile(newFileName.c_str());
 
